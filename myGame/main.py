@@ -4,9 +4,11 @@ print "****************************************"
 print "* Welcome to the game world of Maxiee! *"
 print "****************************************"
 
-if myfile.isSaveExist():
+fileSave = myfile.FileSave()
+
+if fileSave.isSaveExist():
     print "Now load the saving document..."
-    data = myfile.readMySave()
+    data = fileSave.readMySave()
     print "Welcome back, %s." % data['name']
 else:
     print "It seems the first time you play this game..."
@@ -16,6 +18,6 @@ else:
     print "Good! Hello %s. Let's dive into the world of Maxiee!" % myName
     data = {}
     data['name'] = myName
-    myfile.updateMySave(data);
+    fileSave.updateMySave(data);
 
 print "Boring unpromising graduate life..."
