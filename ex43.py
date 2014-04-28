@@ -17,8 +17,13 @@ class Engine(object):
 
         while True:
             print "\n-----------"
+            # when current scene is over
+            # it returns the name of the next scene
             next_scene_name = current_scene.enter()
+            # then we look up the map class
+            # to got the instance of the next scene class
             current_scene = self.scene_map.next_scene(next_scene_name)
+            # then we loop over, to enter the scene
 
 class Death(Scene):
     
