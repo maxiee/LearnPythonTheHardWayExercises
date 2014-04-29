@@ -9,4 +9,5 @@ class Room(object):
         return self.paths.get(direction, None)
     
     def add_paths(self, paths):
+        #Update the dictionary with the key/value pairs from other, overwriting existing keys.
         self.paths.update(paths)
